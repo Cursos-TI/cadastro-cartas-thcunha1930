@@ -1,15 +1,139 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+int main ()
 
-int main() {
-  // Área para definição das variáveis para armazenar as propriedades das cidades
+{
+    char  estado1;
+    char  codigo1[10];
+    char  nome1[50];
+    int   populacao1;
+    float area1;
+    float pib1;
+    int   npt1; // numero dos pontos turisticos
+    
+   
+   
+    char  estado2;
+    char  codigo2[10];
+    char  nome2[50];
+    int   populacao2;
+    float area2;
+    float pib2;
+    int   npt2;// numero dos pontos turisticos 
 
-  // Área para entrada de dados
 
-  // Área para exibição dos dados da cidade
+        // entrada carta 01
 
-return 0;
-} 
+
+    printf("Digite os dados da primeira carta; \n");
+
+    printf("Estado (A-H): ");
+    scanf("%c" ,  &estado1);
+    getchar();
+    
+
+    printf("Codigo: ");
+    fgets(codigo1 , sizeof(codigo1) , stdin);
+  
+
+    printf("Cidade; ");
+    fgets(nome1, sizeof(nome1), stdin); 
+   
+    
+   
+     printf("Populacao: "); 
+    scanf("%d" , &populacao1);
+    getchar();
+
+     printf("Area km2: ");
+    scanf("%f" , &area1);
+
+    printf("Qual o PIB; ");
+     scanf("%f" , &pib1);
+
+    printf("Qual o numero dos pontos turisticos; ");
+    scanf("%d", &npt1);
+
+
+    
+
+    
+    
+    
+    
+    // entrada carta 02
+
+
+
+
+     printf("Digite os dados da segunda carta; \n");
+
+    printf("Estado (A-H): ");
+    scanf(" %c" ,  &estado2);
+    getchar();
+  
+
+    printf("Codigo: ");
+    fgets(codigo2, sizeof(codigo2) , stdin);
+
+
+    printf("Cidade; ");
+    fgets(nome2, sizeof(nome2), stdin); 
+    
+   
+    printf("Populacao: "); 
+    scanf("%d" , &populacao2);
+   getchar();
+
+    printf("Area km2: ");
+    scanf("%f" , &area2);
+
+      printf("Qual o PIB; ");
+    scanf("%f" , &pib2);	
+
+    printf("Qual o numero dos pontos turisticos; ");
+    scanf("%d", &npt2);
+
+
+    printf("\n=== Cartas cadastradas ===\n");
+
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s", codigo1);
+    printf("Cidade: %s", nome1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões\n", pib1);
+    printf("Pontos turísticos: %d\n", npt1);
+
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s", codigo2);
+    printf("Cidade: %s", nome2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões\n", pib2);
+    printf("Pontos turísticos: %d\n", npt2);
+
+    return 0;
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+}
