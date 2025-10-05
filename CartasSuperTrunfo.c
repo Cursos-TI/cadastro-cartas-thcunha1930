@@ -12,7 +12,7 @@ int main ()
     int   npt1; // numero dos pontos turisticos
     float per1; // PIB percapta 
     float den1; // densidade 
-    
+    float super1; // super poder 
    
    
     char  estado2;
@@ -24,6 +24,8 @@ int main ()
     int   npt2;// numero dos pontos turisticos 
     float per2; // PIB percapta 
     float den2; // densidade 
+    float super2; // super poder 
+
 
 
         // entrada carta 01
@@ -102,6 +104,8 @@ int main ()
     den2 = populacao2 / area2;
     per1 = pib1 / populacao1;
     per2 = pib2 / populacao2;
+    super1 = populacao1 + area1 + pib1 + npt1 + per1 + (1.0/den1);
+    super2 = populacao2 + area2 + pib2 + npt2 + per2 + (1.0/den2);
 
    
    
@@ -113,10 +117,11 @@ int main ()
     printf("Cidade: %s", nome1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f bilhões\n", pib1);
+    printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", npt1);
-    printf("Sua densidade e de: %f\n", den1);
-    printf("Seu PIB percapta e de: %f\n", per1);
+    printf("Sua densidade e de: %.2f\n", den1);
+    printf("Seu PIB percapta e de: %.2f\n", per1);
+    printf("Seu super poder e: %.2f\n", super1);
 
 
   
@@ -128,10 +133,25 @@ int main ()
     printf("Cidade: %s", nome2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f bilhões\n", pib2);
+    printf("PIB: %.2f \n", pib2);
     printf("Pontos turísticos: %d\n", npt2);
     printf("Sua densidade e de: %.2f\n", den2);
     printf("Seu PIB percapta e de: %.2f\n", per2);
+    printf("Seu super poder e: %f\n", super2);
+
+
+
+// Comparações
+    printf("\nComparacao de Cartas:\n");
+    printf("Populacao: Carta (%d) venceu\n", populacao1 > populacao2);
+    printf("Area: Carta (%d) venceu\n", area1 > area2);
+    printf("PIB: Carta (%d) venceu \n", pib1 > pib2);
+    printf("Pontos Turisticos: Carta (%d) venceu \n", npt1 > npt2);
+    printf("Densidade Populacional: Carta (%d) venceu \n", den1 < den2);
+    printf("PIB per Capita: Carta (%d) venceu \n", per1 > per2);
+    printf("Super Poder: Carta (%d) venceu \n", super1 > super2);
+
+
 
    
    
